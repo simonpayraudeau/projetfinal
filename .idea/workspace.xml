@@ -10,13 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80245353-eb79-4d66-9015-18b88a553788" name="Default Changelist" comment="Second commit" />
+    <list default="true" id="80245353-eb79-4d66-9015-18b88a553788" name="Default Changelist" comment="voyage voyage #LaurentVoulzy">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Passager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Passager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Voyage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voyage.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -87,7 +91,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601563445420</updated>
-      <workItem from="1601563446552" duration="1691000" />
+      <workItem from="1601563446552" duration="2630000" />
+      <workItem from="1601642343829" duration="916000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1601564503606</created>
@@ -110,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601564871294</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="voyage voyage #LaurentVoulzy">
+      <created>1601565367369</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601565367369</updated>
+    </task>
+    <task id="LOCAL-00005" summary="voyage voyage #LaurentVoulzy">
+      <created>1601565551598</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601565551598</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,16 +145,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
+    <MESSAGE value="voyage voyage #LaurentVoulzy" />
+    <option name="LAST_COMMIT_MESSAGE" value="voyage voyage #LaurentVoulzy" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1601563887771">
+    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1601565532248">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601563887771" />
+    <state x="562" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601565532248" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1601642672829">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601642672829" />
     <state x="647" y="310" width="585" height="203" key="Github.ShareDialog" timestamp="1601563822188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -156,9 +181,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601563736787" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601564876196">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601565557043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601564876196" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601565557043" />
   </component>
 </project>

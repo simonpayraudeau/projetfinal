@@ -10,27 +10,28 @@ namespace App\Entity;
 class Passager
 {
     /**
-     * Id_passager
+     * @ORM\Id()
+     * @ORM\Column(name="id_passager",type="integer")
      */
     private $id_passager;
 
     /**
-     * Nom_passager
+     * @ORM\Column(name="nom",type="string")
      */
     private $nom;
 
     /**
-     * Prenom_passager
+     * @ORM\Column(name="prenom",type="string")
      */
     private $prenom;
 
     /**
-     * Email_passager
+     * @ORM\Column(name="email_passager",type="string")
      */
     private $email_passager;
 
     /**
-     * Tel_passager
+     * @ORM\Column(name="tel_passager",type="integer")
      */
     private $tel_passager;
 

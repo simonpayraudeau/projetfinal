@@ -9,6 +9,7 @@ use ApiPlatform\Core\Annotation\ApiSubresource;
 /**
  * Class Voyage
  * @package App\Entity
+ * @ApiResource()
  *
  */
 
@@ -17,22 +18,44 @@ class Voyage
 {
 
     /**
-     * @var
+     * @ORM\Id()
+     * @ORM\Column(name="idVoyage",type="integer")
      */
 private $idVoyage;
 
+    /**
+     * @ORM\Column(name="idPassager",type="integer")
+     */
 private $idPassager;
 
+/**
+     * @ORM\Column(name="dateVoyage",type="date")
+     */
 private $dateVoyage;
 
+    /**
+     * @ORM\Column(name="typeVoyage",type="string")
+     */
 private $typeVoyage;
 
+    /**
+     * @ORM\Column(name="numeroTransport",type="string")
+     */
 private $numeroTransport;
 
+    /**
+     * @ORM\Column(name="lieuDepart",type="string")
+     */
 private $lieuDepart;
 
+    /**
+     * @ORM\Column(name="lieuArrive",type="string")
+     */
 private $lieuArrive;
 
+    /**
+     * @ORM\Column(name="effecue",type="boolean")
+     */
 private $effectue;
 
     /**
