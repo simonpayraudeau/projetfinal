@@ -53,10 +53,6 @@ private $lieuDepart;
      */
 private $lieuArrive;
 
-    /**
-     * @ORM\Column(name="effecue",type="boolean")
-     */
-private $effectue;
 
     /**
      * @return mixed
@@ -168,22 +164,6 @@ private $effectue;
     public function setLieuArrive($lieuArrive): void
     {
         $this->lieuArrive = $lieuArrive;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEffectue()
-    {
-        return $this->effectue;
-    }
-
-    /**
-     * @param mixed $effectue
-     */
-    public function setEffectue($effectue): void
-    {
-        $this->effectue = $effectue;
     }
 
 
