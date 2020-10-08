@@ -53,7 +53,6 @@ private $lieuDepart;
      */
 private $lieuArrive;
 
-
     /**
      * @return mixed
      */
@@ -165,6 +164,8 @@ private $lieuArrive;
     {
         $this->lieuArrive = $lieuArrive;
     }
+
+
 
 
 
