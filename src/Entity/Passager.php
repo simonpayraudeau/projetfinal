@@ -2,20 +2,16 @@
 
 
 namespace App\Entity;
-use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Passager
- *
- * @ORM\Entity()
- * @ORM\Table(name="Voyageur")
  * @package App\Entity
  */
 class Passager
 {
     /**
      * @ORM\Id()
-     * @ORM\Column(name="id_voyageur",type="integer")
+     * @ORM\Column(name="id_passager",type="integer")
      */
     private $id_passager;
 
@@ -28,6 +24,16 @@ class Passager
      * @ORM\Column(name="prenom",type="string")
      */
     private $prenom;
+
+    /**
+     * @ORM\Column(name="email_passager",type="string")
+     */
+    private $email_passager;
+
+    /**
+     * @ORM\Column(name="tel_passager",type="integer")
+     */
+    private $tel_passager;
 
     /**
      * @return mixed
@@ -77,7 +83,36 @@ class Passager
         $this->prenom = $prenom;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getEmailPassager()
+    {
+        return $this->email_passager;
+    }
 
+    /**
+     * @param mixed $email_passager
+     */
+    public function setEmailPassager($email_passager): void
+    {
+        $this->email_passager = $email_passager;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getTelPassager()
+    {
+        return $this->tel_passager;
+    }
+
+    /**
+     * @param mixed $tel_passager
+     */
+    public function setTelPassager($tel_passager): void
+    {
+        $this->tel_passager = $tel_passager;
+    }
 
 }
