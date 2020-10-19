@@ -9,73 +9,159 @@ use ApiPlatform\Core\Annotation\ApiSubresource;
 /**
  * Class Dossier
  * @package App\Entity
+ * @ORM\Table(name="Dossier")
  * @ApiResource()
  *
  */
 
-class Dossier
-{
-/**
-* @ORM\Column(name="idPassager",type="integer")
-*/
-    private $passager;
-
-/**
-* @ORM\Column(name="idVoyage",type="string")
-*/
-    private $voyage;
-
-/**
- * @ORM\Column(name="effectue",type="boolean")
- */
-    private $effectue;
+    class Dossier
+    {
+    /**
+    * @ORM\Column(name="id_dossier",type="integer")
+    */
+        private $id_dossier;
 
     /**
-     * @return mixed
-     */
-    public function getPassager()
-    {
-        return $this->passager;
-    }
+    * @ORM\Column(name="id_voyageur",type="integer")
+    */
+        private $id_voyageur;
 
     /**
-     * @param mixed $passager
+     * @ORM\Column(name="methode",type="string")
      */
-    public function setPassager($passager): void
-    {
-        $this->passager = $passager;
-    }
+        private $methode;
 
     /**
-     * @return mixed
+     * @ORM\Column(name="id_voyage",type="integer")
      */
-    public function getVoyage()
-    {
-        return $this->voyage;
-    }
+    private $id_voyage;
 
     /**
-     * @param mixed $voyage
+     * @ORM\Column(name="date",type="string")
      */
-    public function setVoyage($voyage): void
-    {
-        $this->voyage = $voyage;
-    }
+    private $date;
 
     /**
-     * @return mixed
+     * @ORM\Column(name="depart",type="string")
      */
-    public function getEffectue()
-    {
-        return $this->effectue;
-    }
+    private $depart;
 
     /**
-     * @param mixed $effectue
-     */
-    public function setEffectue($effectue): void
-    {
-        $this->effectue = $effectue;
-    }
+    * @ORM\Column(name="arrivee",type="string")
+    */
+        private $arrivee;
+
+        /**
+         * @return mixed
+         */
+        public function getIdDossier()
+        {
+            return $this->id_dossier;
+        }
+
+        /**
+         * @param mixed $id_dossier
+         */
+        public function setIdDossier($id_dossier): void
+        {
+            $this->id_dossier = $id_dossier;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getIdVoyageur()
+        {
+            return $this->id_voyageur;
+        }
+
+        /**
+         * @param mixed $id_voyageur
+         */
+        public function setIdVoyageur($id_voyageur): void
+        {
+            $this->id_voyageur = $id_voyageur;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getMethode()
+        {
+            return $this->methode;
+        }
+
+        /**
+         * @param mixed $methode
+         */
+        public function setMethode($methode): void
+        {
+            $this->methode = $methode;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getIdVoyage()
+        {
+            return $this->id_voyage;
+        }
+
+        /**
+         * @param mixed $id_voyage
+         */
+        public function setIdVoyage($id_voyage): void
+        {
+            $this->id_voyage = $id_voyage;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getDate()
+        {
+            return $this->date;
+        }
+
+        /**
+         * @param mixed $date
+         */
+        public function setDate($date): void
+        {
+            $this->date = $date;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getDepart()
+        {
+            return $this->depart;
+        }
+
+        /**
+         * @param mixed $depart
+         */
+        public function setDepart($depart): void
+        {
+            $this->depart = $depart;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getArrivee()
+        {
+            return $this->arrivee;
+        }
+
+        /**
+         * @param mixed $arrivee
+         */
+        public function setArrivee($arrivee): void
+        {
+            $this->arrivee = $arrivee;
+        }
+
 
 }
