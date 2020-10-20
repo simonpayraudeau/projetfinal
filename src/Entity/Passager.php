@@ -4,6 +4,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
 
 /**
  * Class Passager
@@ -16,7 +18,7 @@ class Passager
      * @ORM\Id()
      * @ORM\Column(name="id_voyageur",type="integer")
      */
-    private $id_passager;
+    private $idPassager;
 
     /**
      * @ORM\Column(name="nom",type="string")
@@ -43,15 +45,15 @@ class Passager
      */
     public function getIdPassager()
     {
-        return $this->id_passager;
+        return $this->idPassager;
     }
 
     /**
-     * @param mixed $id_passager
+     * @param mixed $idPassager
      */
-    public function setIdPassager($id_passager): void
+    public function setIdPassager($idPassager): void
     {
-        $this->id_passager = $id_passager;
+        $this->idPassager = $idPassager;
     }
 
     /**

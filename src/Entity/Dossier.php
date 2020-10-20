@@ -5,77 +5,129 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiSubresource;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
 
 /**
  * Class Dossier
- * @package App\Entity
- * @ApiResource()
+ *
+ * @ORM\Table(name="VDossier")
+ * @ORM\Entity()
  *
  */
 
 class Dossier
 {
 /**
-* @ORM\Column(name="idPassager",type="integer")
+ * @ORM\Id()
+* @ORM\Column(name="idDossier",type="integer")
 */
-    private $passager;
+    private $idDossier;
 
 /**
-* @ORM\Column(name="idVoyage",type="string")
+ * @ManyToOne(targetEntity="App\Entity\Passager", fetch="EAGER")
+ * @JoinColumn(name="idVoyageur", referencedColumnName="id_voyageur")
 */
-    private $voyage;
+    private $idVoyageur;
+
 
 /**
- * @ORM\Column(name="effectue",type="boolean")
+ * @ManyToOne(targetEntity="App\Entity\Voyage", fetch="EAGER")
+ * @JoinColumn(name="idVoyage", referencedColumnName="idVoyage")
  */
-    private $effectue;
+    private $idVoyage;
+
+/**
+ * @ORM\Column(name="date",type="string")
+ */
+    private $date;
+
+/**
+ * @ORM\Column(name="effectuee",type="boolean")
+ */
+    private $effectuee;
 
     /**
      * @return mixed
      */
-    public function getPassager()
+    public function getIdDossier()
     {
-        return $this->passager;
+        return $this->idDossier;
     }
 
     /**
-     * @param mixed $passager
+     * @param mixed $idDossier
      */
-    public function setPassager($passager): void
+    public function setIdDossier($idDossier): void
     {
-        $this->passager = $passager;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getVoyage()
-    {
-        return $this->voyage;
-    }
-
-    /**
-     * @param mixed $voyage
-     */
-    public function setVoyage($voyage): void
-    {
-        $this->voyage = $voyage;
+        $this->idDossier = $idDossier;
     }
 
     /**
      * @return mixed
      */
-    public function getEffectue()
+    public function getIdVoyageur()
     {
-        return $this->effectue;
+        return $this->idVoyageur;
     }
 
     /**
-     * @param mixed $effectue
+     * @param mixed $idVoyageur
      */
-    public function setEffectue($effectue): void
+    public function setIdVoyageur($idVoyageur): void
     {
-        $this->effectue = $effectue;
+        $this->idVoyageur = $idVoyageur;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIdVoyage()
+    {
+        return $this->idVoyage;
+    }
+
+    /**
+     * @param mixed $idVoyage
+     */
+    public function setIdVoyage($idVoyage): void
+    {
+        $this->idVoyage = $idVoyage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date): void
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEffectuee()
+    {
+        return $this->effectuee;
+    }
+
+    /**
+     * @param mixed $effectuee
+     */
+    public function setEffectuee($effectuee): void
+    {
+        $this->effectuee = $effectuee;
+    }
+
+
 
 }

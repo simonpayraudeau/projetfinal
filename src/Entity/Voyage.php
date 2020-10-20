@@ -14,19 +14,19 @@ class Voyage
 {
     /**
      * @ORM\Id()
-     * @ORM\Column(name="id_voyage",type="integer")
+     * @ORM\Column(name="idVoyage",type="integer")
      */
-private $id_voyage;
+private $idVoyage;
 
     /**
-     * @ORM\Column(name="type_transport",type="string")
+     * @ORM\Column(name="typeTransport",type="string")
      */
-private $type_transport;
+private $typeTransport;
 
     /**
-     * @ORM\Column(name="id_transport",type="string")
+     * @ORM\Column(name="idTransport",type="string")
      */
-private $id_transport;
+private $idTransport;
 
     /**
      * @ORM\Column(name="depart",type="string")
@@ -43,15 +43,15 @@ private $arrivee;
      */
     public function getIdVoyage()
     {
-        return $this->id_voyage;
+        return $this->idVoyage;
     }
 
     /**
-     * @param mixed $id_voyage
+     * @param mixed $idVoyage
      */
-    public function setIdVoyage($id_voyage): void
+    public function setIdVoyage($idVoyage): void
     {
-        $this->id_voyage = $id_voyage;
+        $this->idVoyage = $idVoyage;
     }
 
     /**
@@ -59,15 +59,15 @@ private $arrivee;
      */
     public function getTypeTransport()
     {
-        return $this->type_transport;
+        return $this->typeTransport;
     }
 
     /**
-     * @param mixed $type_transport
+     * @param mixed $typeTransport
      */
-    public function setTypeTransport($type_transport): void
+    public function setTypeTransport($typeTransport): void
     {
-        $this->type_transport = $type_transport;
+        $this->typeTransport = $typeTransport;
     }
 
     /**
@@ -75,15 +75,15 @@ private $arrivee;
      */
     public function getIdTransport()
     {
-        return $this->id_transport;
+        return $this->idTransport;
     }
 
     /**
-     * @param mixed $id_transport
+     * @param mixed $idTransport
      */
-    public function setIdTransport($id_transport): void
+    public function setIdTransport($idTransport): void
     {
-        $this->id_transport = $id_transport;
+        $this->idTransport = $idTransport;
     }
 
     /**
@@ -117,5 +117,6 @@ private $arrivee;
     {
         $this->arrivee = $arrivee;
     }
+
 
 }

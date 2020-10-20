@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    {% block content %}
+    <p align="center" class="Style1">{{"Dossier"}}</p>
+    <table border="2" align="center" cellspacing="0" cellpadding="2" >
+        <tr bgcolor="#FFFFFF">
+            <td width="50"><strong>Nom</strong></td>
+            <td width="50"><strong>Prenom</strong></td>
+            <td width="50"><strong>Type Transport</strong></td>
+            <td width="50"><strong>Id Transport</strong></td>
+            <td width="50"><strong>Depart</strong></td>
+            <td width="50"><strong>Arrivee</strong></td>
+        </tr>
+
+        {% set i=0 %}
+        {% for e in values %}
+            {% set i=i+1 %}
+            {% if i is odd %}
+                <tr bgcolor="#88C56D">
+            {% else %}
+                <tr bgcolor="#DAEAD3">
+            {% endif %}
+            <td>{{e.getIdVoyageur().getNom()}}</td>
+            <td>{{e.getIdVoyageur().getPrenom()}}</td>
+            <td>{{e.getIdVoyage().getTypeTransport()}}</td>
+            <td>{{e.getIdVoyage().getIdTransport()}}</td>
+            <td>{{e.getIdVoyage().getDepart()}}</td>
+            <td>{{e.getIdVoyage().getArrivee()}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+    </body>
+</html>
+
+
+
+

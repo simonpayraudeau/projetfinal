@@ -24,19 +24,15 @@
             {% else %}
                 <tr bgcolor="#DAEAD3">
             {% endif %}
-            <td>{{e.id_voyage}}</td>
-            <td>{{e.type_transport}}</td>
-            <td>{{e.id_transport}}</td>
+            <td>{{e.idVoyage}}</td>
+            <td>{{e.typeTransport}}</td>
+            <td>{{e.idTransport}}</td>
             <td>{{e.depart}}</td>
             <td>{{e.arrivee}}</td>
             </tr>
         {% endfor %}
     </table>
     {% endblock %}
-
-{% for f in voyages %}
-    {{ f.type_transport }} {{ f.depart }} <br>
-{% endfor %}
     </body>
 </html>
 

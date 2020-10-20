@@ -11,3 +11,11 @@ ControllerPassager :
 ControllerVoyage :
   path: /voyage
   controller:   App\Controller\ControllerVoyage::controllervoyage
+
+ControllerDossier:
+  path: /dossier
+  controller: App\Controller\ControllerDossier::controllerdossier
+
+ControllerVoyageParPassager:
+  path: /parPassager
+  controller: App\Controller\ControllerDossier::ControllerVoyageParPassager
