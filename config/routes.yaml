@@ -6,3 +6,8 @@
 ControllerPassager :
   path: /passager
   controller:   App\Controller\ControllerPassager::controllerpassager
+
+
+ControllerVoyage :
+  path: /voyage
+  controller:   App\Controller\ControllerVoyage::controllervoyage

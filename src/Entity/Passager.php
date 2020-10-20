@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Passager
+ * @ORM\Table(name="Passager")
  * @ORM\Entity()
- * @ORM\Table(name="Voyageur")
  */
 class Passager
 {
@@ -28,15 +28,15 @@ class Passager
      */
     private $prenom;
 
-//    /**
-//     * @ORM\Column(name="email_passager",type="string")
-//     */
-//    private $email_passager;
-//
-//    /**
-//     * @ORM\Column(name="tel_passager",type="integer")
-//     */
-//    private $tel_passager;
+    /**
+     * @ORM\Column(name="telephone",type="string")
+     */
+    private $telephone;
+
+    /**
+     * @ORM\Column(name="mail",type="string")
+     */
+    private $mail;
 
     /**
      * @return mixed
@@ -86,36 +86,37 @@ class Passager
         $this->prenom = $prenom;
     }
 
-//    /**
-//     * @return mixed
-//     */
-//    public function getEmailPassager()
-//    {
-//        return $this->email_passager;
-//    }
-//
-//    /**
-//     * @param mixed $email_passager
-//     */
-//    public function setEmailPassager($email_passager): void
-//    {
-//        $this->email_passager = $email_passager;
-//    }
-//
-//    /**
-//     * @return mixed
-//     */
-//    public function getTelPassager()
-//    {
-//        return $this->tel_passager;
-//    }
-//
-//    /**
-//     * @param mixed $tel_passager
-//     */
-//    public function setTelPassager($tel_passager): void
-//    {
-//        $this->tel_passager = $tel_passager;
-//    }
+    /**
+     * @return mixed
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * @param mixed $telephone
+     */
+    public function setTelephone($telephone): void
+    {
+        $this->telephone = $telephone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMail()
+    {
+        return $this->mail;
+    }
+
+    /**
+     * @param mixed $mail
+     */
+    public function setMail($mail): void
+    {
+        $this->mail = $mail;
+    }
+
 
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    {% block content %}
+    <p align="center" class="Style1">{{"Voyage"}}</p>
+    <table border="2" align="center" cellspacing="0" cellpadding="2" >
+        <tr bgcolor="#FFFFFF">
+            <td width="50"><strong>ID</strong></td>
+            <td width="50"><strong>Type transport </strong></td>
+            <td width="50"><strong>id </strong></td>
+            <td width="50"><strong>Depart</strong></td>
+            <td width="30"><strong>Arrivee</strong></td>
+        </tr>
+        {% set i=0 %}
+        {% for e in voyages %}
+            {% set i=i+1 %}
+            {% if i is odd %}
+                <tr bgcolor="#88C56D">
+            {% else %}
+                <tr bgcolor="#DAEAD3">
+            {% endif %}
+            <td>{{e.id_voyage}}</td>
+            <td>{{e.type_transport}}</td>
+            <td>{{e.id_transport}}</td>
+            <td>{{e.depart}}</td>
+            <td>{{e.arrivee}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+
+{% for f in voyages %}
+    {{ f.type_transport }} {{ f.depart }} <br>
+{% endfor %}
+    </body>
+</html>
+
+
+
+

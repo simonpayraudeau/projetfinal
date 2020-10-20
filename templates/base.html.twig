@@ -6,8 +6,35 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-    {% for e in passagers %}
-        {{ e.nom }} {{ e.prenom }} <br>
-    {% endfor %}
+    {% block content %}
+    <p align="center" class="Style1">{{"Passager"}}</p>
+    <table border="2" align="center" cellspacing="0" cellpadding="2" >
+        <tr bgcolor="#FFFFFF">
+            <td width="50"><strong>Nom</strong></td>
+            <td width="50"><strong>Prenom</strong></td>
+            <td width="50"><strong>Téléphone</strong></td>
+            <td width="30"><strong>Email</strong></td>
+        </tr>
+        {% set i=0 %}
+        {% for e in passagers %}
+            {% set i=i+1 %}
+            {% if i is odd %}
+                <tr bgcolor="#88C56D">
+            {% else %}
+                <tr bgcolor="#DAEAD3">
+            {% endif %}
+            <td>{{e.nom}}</td>
+            <td>{{e.prenom}}</td>
+            <td>{{e.telephone}}</td>
+            <td>{{e.mail}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    {% endblock %}
     </body>
 </html>
+
+
+
+

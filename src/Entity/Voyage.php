@@ -3,171 +3,119 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiResource;
-use ApiPlatform\Core\Annotation\ApiSubresource;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class Voyage
- * @package App\Entity
- * @ApiResource()
- *
+ * @ORM\Table(name="Voyage")
+ * @ORM\Entity()
  */
-
-
 class Voyage
 {
-
     /**
      * @ORM\Id()
-     * @ORM\Column(name="idVoyage",type="integer")
+     * @ORM\Column(name="id_voyage",type="integer")
      */
-private $idVoyage;
+private $id_voyage;
 
     /**
-     * @ORM\Column(name="idPassager",type="integer")
+     * @ORM\Column(name="type_transport",type="string")
      */
-private $idPassager;
-
-/**
-     * @ORM\Column(name="dateVoyage",type="date")
-     */
-private $dateVoyage;
+private $type_transport;
 
     /**
-     * @ORM\Column(name="typeVoyage",type="string")
+     * @ORM\Column(name="id_transport",type="string")
      */
-private $typeVoyage;
+private $id_transport;
 
     /**
-     * @ORM\Column(name="numeroTransport",type="string")
+     * @ORM\Column(name="depart",type="string")
      */
-private $numeroTransport;
+private $depart;
 
     /**
-     * @ORM\Column(name="lieuDepart",type="string")
+         * @ORM\Column(name="arrivee",type="string")
      */
-private $lieuDepart;
-
-    /**
-     * @ORM\Column(name="lieuArrive",type="string")
-     */
-private $lieuArrive;
+private $arrivee;
 
     /**
      * @return mixed
      */
     public function getIdVoyage()
     {
-        return $this->idVoyage;
+        return $this->id_voyage;
     }
 
     /**
-     * @param mixed $idVoyage
+     * @param mixed $id_voyage
      */
-    public function setIdVoyage($idVoyage): void
+    public function setIdVoyage($id_voyage): void
     {
-        $this->idVoyage = $idVoyage;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIdPassager()
-    {
-        return $this->idPassager;
-    }
-
-    /**
-     * @param mixed $idPassager
-     */
-    public function setIdPassager($idPassager): void
-    {
-        $this->idPassager = $idPassager;
+        $this->id_voyage = $id_voyage;
     }
 
     /**
      * @return mixed
      */
-    public function getDateVoyage()
+    public function getTypeTransport()
     {
-        return $this->dateVoyage;
+        return $this->type_transport;
     }
 
     /**
-     * @param mixed $dateVoyage
+     * @param mixed $type_transport
      */
-    public function setDateVoyage($dateVoyage): void
+    public function setTypeTransport($type_transport): void
     {
-        $this->dateVoyage = $dateVoyage;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTypeVoyage()
-    {
-        return $this->typeVoyage;
-    }
-
-    /**
-     * @param mixed $typeVoyage
-     */
-    public function setTypeVoyage($typeVoyage): void
-    {
-        $this->typeVoyage = $typeVoyage;
+        $this->type_transport = $type_transport;
     }
 
     /**
      * @return mixed
      */
-    public function getNumeroTransport()
+    public function getIdTransport()
     {
-        return $this->numeroTransport;
+        return $this->id_transport;
     }
 
     /**
-     * @param mixed $numeroTransport
+     * @param mixed $id_transport
      */
-    public function setNumeroTransport($numeroTransport): void
+    public function setIdTransport($id_transport): void
     {
-        $this->numeroTransport = $numeroTransport;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLieuDepart()
-    {
-        return $this->lieuDepart;
-    }
-
-    /**
-     * @param mixed $lieuDepart
-     */
-    public function setLieuDepart($lieuDepart): void
-    {
-        $this->lieuDepart = $lieuDepart;
+        $this->id_transport = $id_transport;
     }
 
     /**
      * @return mixed
      */
-    public function getLieuArrive()
+    public function getDepart()
     {
-        return $this->lieuArrive;
+        return $this->depart;
     }
 
     /**
-     * @param mixed $lieuArrive
+     * @param mixed $depart
      */
-    public function setLieuArrive($lieuArrive): void
+    public function setDepart($depart): void
     {
-        $this->lieuArrive = $lieuArrive;
+        $this->depart = $depart;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getArrivee()
+    {
+        return $this->arrivee;
+    }
 
-
-
-
+    /**
+     * @param mixed $arrivee
+     */
+    public function setArrivee($arrivee): void
+    {
+        $this->arrivee = $arrivee;
+    }
 
 }

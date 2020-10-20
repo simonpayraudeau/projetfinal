@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Passager;
 use App\Entity\Personne;
+use App\Entity\Voyage;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
