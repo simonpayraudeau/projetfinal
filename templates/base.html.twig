@@ -6,7 +6,8 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% for e in passagers %}
+        {{ e.nom }} {{ e.prenom }} <br>
+    {% endfor %}
     </body>
 </html>
