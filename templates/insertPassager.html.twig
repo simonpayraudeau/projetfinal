@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Ajout d'un passager{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    {% block content %}
+    <p align="center" class="Style1">{{"Ajout d'un passager"}}</p>
+    <form action="/action" method ="POST">
+        <input id="nom passager" name="nom passager" placeholder="nom passager" type="text">
+        <input id="prenom passager" name="prenom passager" placeholder="prenom passager" type="text">
+        <input id="email passager" name="email passager" placeholder="email passager" type="text">
+        <input id="telephone passager" name="telephone passager" placeholder="telephone passager" type="text">
+        <button type="submit"> Ajouter </button>
+    </form>
+    {% endblock %}
+
+    </body>
+</html>
+
+
+
+
